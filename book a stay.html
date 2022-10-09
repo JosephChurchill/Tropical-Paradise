@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+
+<html>
+
+    <head>
+
+        <title>Tropical Paradise - Book a Stay</title>
+
+        <!-- Stylesheet for all pages -->
+        <link rel="stylesheet" href="css/style.css">
+
+    </head>
+
+    <body>
+
+        <!-- The header contains an icon and link to the homepage, and links
+            to different parts of the site on the right -->
+        <header>
+
+            <!-- Website icon embedded in <a> element to direct back to
+                homepage from anywhere in the site -->
+            <a href="index.html"><img class="website-icon"
+                src="images/icon.jpg"
+                alt="icon"></a>
+
+            <!-- Title redirects to homepage on click. Hidden when screen
+                width is narrower that 1200px -->
+            <a class="website-title" href="index.html">Tropical Paradise</a>
+
+            <!-- This is an empty element with auto right margin to make the
+                navigation links stick to right when the website title is
+                hidden due to narrower screen -->
+            <a class="website-title-alt"></a>
+
+            <!-- This navbar sticks to the right of the header and contains
+                navigation links -->
+            <nav>
+
+                <!-- The elements of this list are top-level navigation
+                    buttons -->
+                <ul class="header-links">
+                    
+                    <!-- A locations dropdown menu appears when the user hovers
+                        over the LOCATIONS button -->
+                    <li class="dropdown">
+
+                        <!-- LOCATIONS button -->
+                        <button class="header-link">LOCATIONS</button>
+                        
+                        <!-- Dropdown menu links, not displayed initially -->
+                        <ul class=dropdown-content>
+
+                            <!-- These links redirect to the relevant Location
+                                page -->
+                            <li><a href="malibu mansion.html">
+                                Malibu Mansion</a></li>
+                            <li><a href="dubai apartment.html">
+                                Dubai Apartment</a></li>
+                            <li><a href="amazon treehouse.html">
+                                Amazon Treehouse</a></li>
+                            <li><a href="tibetan cave.html">
+                                Tibetan Cave</a></li>
+                            <li><a href="antarctic station.html">
+                                Antarctic Station</a></li>
+                            <li><a href="mumbai hotel.html">
+                                Mumbai Hotel</a></li>
+                            <li><a href="saharan bungalow.html">
+                                Saharan Bungalow</a></li>
+
+                        </ul>
+
+                    </li>
+
+                    <!-- More buttons -->
+                    <li><button class="header-link"
+                        onclick="button_click('about us.html');">
+                        ABOUT US</button></li>
+                    <li><button class="header-link"
+                        onclick="button_click('reviews.html');">
+                        REVIEWS</button></li>
+                    <li><button class="header-link"
+                        onclick="button_click('contact.html');">
+                        CONTACT</button></li>
+                    
+                </ul>
+
+            </nav>
+
+        </header>
+
+        <!-- This is the main section of the page, apart from the header and
+            footer -->
+        <main id="book-a-stay-main">
+
+            <!-- The left hand side of the screen is dedicated to text. When
+                resized smaller or on mobile, this and the entry form are
+                stacked vertically -->
+            <section id="book-a-stay-text">
+
+                <!-- Motivational text to encourage you to spend your money
+                    here -->
+                <h2 id="book-a-stay-subtitle">Why stay at home when you can
+                    stay at one of our world-famous holiday resorts?
+                    Book now!</h2>
+                
+            </section>
+
+            <!-- The right hand side of the screen contains a booking form.
+                Stacks vertically on screen resize -->
+            <section id="book-a-stay-form">
+
+                <!-- Dropdown select box for locationb selection -->
+                <select class="book-a-stay-entry" id="location-entry">
+
+                    <!-- SELECT LOCATION option is bold -->
+                    <option id="please-select" value="please-select">
+                        SELECT LOCATION</option>
+
+                    <!-- The 7 possible locations -->
+                    <option id="Malibu Mansion" value="Malibu Mansion">
+                        Malibu Mansion</option>
+                    <option id="Dubai Apartment" value="Dubai Apartment">
+                        Dubai Apartment</option>
+                    <option id="Amazon Treehouse" value="Amazon Treehouse">
+                        Amazon Treehouse</option>
+                    <option id="Tibetan Cave"" value="Tibetan Cave">
+                        Tibetan Cave</option>
+                    <option id="Antarctic Station" value="Antarctic Station">
+                        Antarctic Station</option>
+                    <option id="Mumbai Hotel" value="Mumbai Hotel">
+                        Mumbai Hotel</option>
+                    <option id="Saharan Bungalow" value="Saharan Bungalow">
+                        Saharan Bungalow</option>
+
+                </select>
+
+                <!-- The first and last name entries are side by side -->
+                <section class="book-a-stay-form-section">
+
+                    <input class="book-a-stay-entry" id="first-name-entry"
+                    placeholder="First Name">
+                    <input class="book-a-stay-entry" id="last-name-entry"
+                    placeholder="Last Name">
+
+                </section>
+
+                <!-- The phone and email entries are side by side -->
+                <section class="book-a-stay-form-section">
+
+                    <input class="book-a-stay-entry" id="phone-entry"
+                    placeholder="Phone">
+                    <input class="book-a-stay-entry" id="email-entry"
+                    placeholder="Email">
+
+                </section>
+
+                <!-- Date selector (calendar) -->
+                <input type=date class="book-a-stay-entry" id="date-entry">
+
+                <!-- This button will make a popup appear to confirm your
+                    booking details and direct you to the payment screen
+                    (not created) -->
+                <button class="book-now" onclick="book_now();">
+                    <span>BOOK NOW</span></button>
+
+            </section>
+       
+        </main>
+
+        <!-- The footer is fixed to the bottom of the page and contains links
+            to the Privacy Policy, Terms and Conditions, and back to the
+            homepage -->
+        <footer class="fixed-footer">
+
+            <a href="privacy policy.html">Privacy Policy</a>
+            <a href="index.html">© Tropical Paradise Ltd</a>
+            <a href="terms and conditions.html">Terms and Conditions</a>
+
+        </footer>
+
+        <section id="booked-popup">
+
+            <br><strong>Please confirm your booking:</strong><br>
+            <p id="loc"></p><br>
+            <p id="fn"></p><br>
+            <p id="ln"></p><br>
+            <p id="phone"></p><br>
+            <p id="email"></p><br>
+            <p id="date"></p><br>
+            <button onclick="document.location.href='page unavailable.html';">
+                Continue to payment</button><br>
+            <button onclick="cancel_booking();">Back</button><br>
+
+        </section>
+
+    </body>
+
+    <!-- Implements page redirection when relevant button is pressed -->
+    <script src="js/script.js"></script>
+
+    <!-- Gets the location stored in localStorage from a Location page
+        previously browsed (if relevant) to autofill the location dropdown -->
+    <script src="js/script3.js"></script>
+
+    <!-- Popup when BOOK-NOW button clicked -->
+    <script src="js/script4.js"></script>
+
+</html>

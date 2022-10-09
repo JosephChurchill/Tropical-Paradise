@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+
+<html>
+
+    <head>
+
+        <title>Tropical Paradise - Welcome to Tropical Paradise, where you can enjoy the vacation of your dreams in weird locations around the world</title>
+
+        <!-- Stylesheet for all pages -->
+        <link rel="stylesheet" href="css/style.css">
+
+    </head>
+
+    <body>
+
+        <!-- The header contains an icon and link to the homepage, and links
+        to different parts of the site on the right -->
+        <header>
+
+            <!-- Website icon embedded in <a> element to direct back to
+                homepage from anywhere in the site -->
+            <a href="index.html"><img class="website-icon"
+                src="images/icon.jpg"
+                alt="icon"></a>
+
+            <!-- Title redirects to homepage on click. Hidden when screen
+                width is narrower that 1200px -->
+            <a class="website-title" href="index.html">Tropical Paradise</a>
+
+            <!-- This is an empty element with auto right margin to make the
+                navigation links stick to right when the website title is
+                hidden due to narrower screen -->
+            <a class="website-title-alt"></a>
+
+            <!-- This navbar sticks to the right of the header and contains
+                navigation links -->
+            <nav>
+
+                <!-- The elements of this list are top-level navigation
+                    buttons -->
+                <ul class="header-links">
+                    
+                    <!-- A locations dropdown menu appears when the user hovers
+                        over the LOCATIONS button -->
+                    <li class="dropdown">
+
+                        <!-- LOCATIONS button -->
+                        <button class="header-link">LOCATIONS</button>
+                        
+                        <!-- Dropdown menu links, not displayed initially -->
+                        <ul class=dropdown-content>
+
+                            <!-- These links redirect to the relevant Location
+                                page -->
+                            <li><a href="malibu mansion.html">
+                                Malibu Mansion</a></li>
+                            <li><a href="dubai apartment.html">
+                                Dubai Apartment</a></li>
+                            <li><a href="amazon treehouse.html">
+                                Amazon Treehouse</a></li>
+                            <li><a href="tibetan cave.html">
+                                Tibetan Cave</a></li>
+                            <li><a href="antarctic station.html">
+                                Antarctic Station</a></li>
+                            <li><a href="mumbai hotel.html">
+                                Mumbai Hotel</a></li>
+                            <li><a href="saharan bungalow.html">
+                                Saharan Bungalow</a></li>
+
+                        </ul>
+
+                    </li>
+
+                    <!-- More buttons -->
+                    <li><button class="header-link"
+                        onclick="button_click('about us.html');">
+                        ABOUT US</button></li>
+                    <li><button class="header-link"
+                        onclick="button_click('reviews.html');">
+                        REVIEWS</button></li>
+                    <li><button class="header-link"
+                        onclick="button_click('contact.html');">
+                        CONTACT</button></li>
+                    
+                </ul>
+
+            </nav>
+
+        </header>
+
+        <!-- This is the main section of the page, apart from the header and
+            footer -->
+        <main id="homepage-main">
+
+            <!-- The left hand side of the screen is dedicated to text. When
+                resized smaller or on mobile, this section covers the entire
+                screen width -->
+            <section id="homepage-texts">
+
+                <!-- Large italicised text of website name -->
+                <h1 id="homepage-title">TROPICAL PARADISE</h1>
+
+                <!-- Smaller description of website -->
+                <h2 id="homepage-subtitle">Welcome to Tropical Paradise, where
+                    you can enjoy the vacation of your dreams in weird
+                    locations around the world</h2>
+
+                <!-- This button links to the Book a Stay page -->
+                <button class="book-now"
+                onclick="button_click('book a stay.html');">
+                <span>BOOK NOW</span></button>
+                
+            </section>
+
+            <!-- The right hand side of the screen contains a couple of images
+                of resorts, rotated and bordered for aesthetics -->
+            <section id="homepage-images">
+
+                <img src="images/Resort 1.jpg" alt="resort">
+                <img src="images/Resort 2.jpg" alt=resort>
+
+            </section>
+       
+        </main>
+
+    </body>
+
+    <!-- Implements page redirection when relevant button is pressed -->    
+    <script src="js/script.js"></script>
+
+</html>

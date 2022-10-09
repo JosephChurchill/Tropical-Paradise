@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+
+<html>
+
+    <head>
+
+        <title>Tropical Paradise - Page Unavailable</title>
+
+        <!-- Stylesheet for all pages -->
+        <link rel="stylesheet" href="css/style.css">
+
+    </head>
+
+    <body>
+
+        <!-- The header contains an icon and link to the homepage, and links
+            to different parts of the site on the right -->
+        <header>
+
+            <!-- Website icon embedded in <a> element to direct back to
+                homepage from anywhere in the site -->
+            <a href="index.html"><img class="website-icon"
+                src="images/icon.jpg"
+                alt="icon"></a>
+
+            <!-- Title redirects to homepage on click. Hidden when screen
+                width is narrower that 1200px -->
+            <a class="website-title" href="index.html">Tropical Paradise</a>
+
+            <!-- This is an empty element with auto right margin to make the
+                navigation links stick to right when the website title is
+                hidden due to narrower screen -->
+            <a class="website-title-alt"></a>
+
+            <!-- This navbar sticks to the right of the header and contains
+                navigation links -->
+            <nav>
+
+                <!-- The elements of this list are top-level navigation
+                    buttons -->
+                <ul class="header-links">
+
+                    <!-- A button to direct to the Book a Stay page -->
+                    <li><button class="header-link"
+                        onclick="button_click('book a stay.html');">
+                        BOOK A STAY</button></li>
+                    
+                    <!-- A locations dropdown menu appears when the user hovers
+                        over the LOCATIONS button -->
+                    <li class="dropdown">
+
+                        <!-- LOCATIONS button -->
+                        <button class="header-link">LOCATIONS</button>
+                        
+                        <!-- Dropdown menu links, not displayed initially -->
+                        <ul class=dropdown-content>
+
+                            <!-- These links redirect to the relevant Location
+                                page -->
+                            <li><a href="malibu mansion.html">
+                                Malibu Mansion</a></li>
+                            <li><a href="dubai apartment.html">
+                                Dubai Apartment</a></li>
+                            <li><a href="amazon treehouse.html">
+                                Amazon Treehouse</a></li>
+                            <li><a href="tibetan cave.html">
+                                Tibetan Cave</a></li>
+                            <li><a href="antarctic station.html">
+                                Antarctic Station</a></li>
+                            <li><a href="mumbai hotel.html">
+                                Mumbai Hotel</a></li>
+                            <li><a href="saharan bungalow.html">
+                                Saharan Bungalow</a></li>
+
+                        </ul>
+
+                    </li>
+
+                    <!-- More buttons -->
+                    <li><button class="header-link"
+                        onclick="button_click('about us.html');">
+                        ABOUT US</button></li>
+                    <li><button class="header-link"
+                        onclick="button_click('reviews.html');">
+                        REVIEWS</button></li>
+                    <li><button class="header-link"
+                        onclick="button_click('contact.html');">
+                        CONTACT</button></li>
+                    
+                </ul>
+
+            </nav>
+
+        </header>
+
+        <!-- This is the main section of the page, apart from the header and
+            footer -->
+        <main id="page-unavailable-main">
+
+            <img id="page-unavailable-image" src="images/robot.png"
+            alt="friendly robot">
+
+            <section>
+
+                <h1>Oops, looks like this feature is unavailable.</h1>
+
+                <h2>It's probably because it hasn't been built yet. Please come back later!</h2>
+
+            </section>
+       
+        </main>
+
+        <!-- The footer is fixed to the bottom of the page and contains links
+            to the Privacy Policy, Terms and Conditions, and back to the
+            homepage -->
+        <footer class="fixed-footer">
+
+            <a href="privacy policy.html">Privacy Policy</a>
+            <a href="index.html">© Tropical Paradise Ltd</a>
+            <a href="terms and conditions.html">Terms and Conditions</a>
+
+        </footer>
+
+    </body>
+
+    <!-- Implements page redirection when relevant button is pressed -->
+    <script src="js/script.js"></script>
+
+</html>

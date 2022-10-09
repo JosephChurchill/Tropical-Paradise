@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+
+<html>
+
+    <head>
+
+        <title>Tropical Paradise - Tibetan Cave</title>
+
+        <!-- Stylesheet for all pages -->
+        <link rel="stylesheet" href="css/style.css">
+
+    </head>
+
+    <body>
+
+        <!-- The header contains an icon and link to the homepage, and links to
+            different parts of the site on the right -->
+        <header>
+
+            <!-- Website icon embedded in <a> element to direct back to
+                homepage from anywhere in the site -->
+            <a href="index.html"><img class="website-icon"
+                src="images/icon.jpg"
+                alt="icon"></a>
+
+            <!-- Title redirects to homepage on click. Hidden when screen width
+                is narrower that 1200px -->
+            <a class="website-title" href="index.html">Tropical Paradise</a>
+
+            <!-- This is an empty element with auto right margin to make the
+                navigation links stick to right when the website title is
+                hidden due to narrower screen -->
+            <a class="website-title-alt"></a>
+
+            <!-- This navbar sticks to the right of the header and contains
+                navigation links -->
+            <nav>
+
+                <!-- The elements of this list are top-level navigation
+                    buttons -->
+                <ul class="header-links">
+
+                    <!-- A button to direct to the Book a Stay page -->
+                    <li><button class="header-link"
+                        onclick="button_click('book a stay.html');">
+                        BOOK A STAY</button></li>
+                    
+                    <!-- A locations dropdown menu appears when the user hovers
+                        over the LOCATIONS button -->
+                    <li class="dropdown">
+
+                        <!-- LOCATIONS button -->
+                        <button class="header-link">LOCATIONS</button>
+                        
+                        <!-- Dropdown menu links, not displayed initially -->
+                        <ul class=dropdown-content>
+
+                            <!-- These links redirect to the relevant Location
+                                page -->
+                            <li><a href="malibu mansion.html">
+                                Malibu Mansion</a></li>
+                            <li><a href="dubai apartment.html">
+                                Dubai Apartment</a></li>
+                            <li><a href="amazon treehouse.html">
+                                Amazon Treehouse</a></li>
+                            <li><a href="tibetan cave.html">
+                                Tibetan Cave</a></li>
+                            <li><a href="antarctic station.html">
+                                Antarctic Station</a></li>
+                            <li><a href="mumbai hotel.html">
+                                Mumbai Hotel</a></li>
+                            <li><a href="saharan bungalow.html">
+                                Saharan Bungalow</a></li>
+
+                        </ul>
+
+                    </li>
+
+                    <!-- More buttons -->
+                    <li><button class="header-link"
+                        onclick="button_click('about us.html');">
+                        ABOUT US</button></li>
+                    <li><button class="header-link"
+                        onclick="button_click('reviews.html');">
+                        REVIEWS</button></li>
+                    <li><button class="header-link"
+                        onclick="button_click('contact.html');">
+                        CONTACT</button></li>
+                    
+                </ul>
+
+            </nav>
+
+        </header>
+
+        <!-- This is the main section of the page, apart from the header and
+            footer -->
+        <main class="location-main">
+
+            <!-- Side nav bar to navigate different sections of page -->
+            <nav class="location-nav">
+                
+                <a class="location-nav-item">Accommodation</a>
+                <a class="location-nav-item">Fauna</a>
+                <a class="location-nav-item">Attractions</a>
+
+            </nav>
+
+            <!-- Contains all info about the loocation -->
+            <section class="location-info">
+
+                <!-- Half opaque image and location name heads the location
+                    page -->
+                <section class="location-header">
+
+                    <img class="location-header-image"
+                    src="images/Tibet Header.jpg"
+                    alt="mountains">
+                    <h1 class="location-header-text">Tibetan Cave</h1>
+                
+                </section>
+
+                <!-- ACCOMMODATION section contains a couple of paragraphs of
+                    text and an image -->
+                <h3 class="location-section-header" id="Accommodation">
+                    ACCOMMODATION</h3>
+
+                <section class="location-section">
+
+                    <section class="location-section-text">
+
+                        <p class="location-text">Here in Tibet we value our customers.</p>
+                        <p class="location-text">So that's why we've handpicked the best mountain cave for you to stay in when you pleasure us with your visit!.</p>
+                        <p class="location-text">Don't be scared - it's very cozy inside, and there are no bears at this high altitude, which means you can safely ascend the steep staircase that leads to the cave.</p>
+
+                    </section>
+
+                    <section class="location-section-image">
+
+                        <img src="images/Tibet Accomodation.jpg"
+                        alt="cave"
+                        class="location-image">
+
+                    </section>
+
+                </section>
+
+                <!-- FAUNA section contains a couple of paragraphs and an
+                    image. Order of these two is different in different
+                    sections for aesthetics -->
+                <h3 class="location-section-header" id="Fauna">FAUNA</h3>
+
+                <section class="location-section">
+
+                    <section class="location-section-image">
+
+                        <img src="images/Tibet Fauna (Yak).jpg"
+                        alt="yak"
+                        class="location-image">
+
+                    </section>
+
+                    <section class="location-section-text">
+
+                        <p class="location-text">See the prehistoric animal in the image on the left. What is it? It's a yak I tell you!</p>
+                        <p class="location-text">Yaks are friendly creatures, warm and soft and they love to give people rides on their shaggy backs.</p>
+                        <p class="location-text">Keep your feet in the stirrups please! If you fall forward you're bound to destroy your body as it gets imapled on the sharp horns.</p>
+
+                    </section>
+
+                </section>
+
+                <!-- 2x ATTRACTIONS sections (obviously only one header
+                    though) -->
+                <h3 class="location-section-header" id="Attractions">
+                    ATTRACTIONS</h3>
+
+                <section class="location-section bottom-space">
+
+                    <section class="location-section-text">
+
+                        <p class="location-text">Why come to Tibet? Because Potala Palace!</p>
+                        <p class="location-text">Here it stands, in all it's glory, waiting for you! Yes, you! Don't disappoint it!</p>
+                        <p class="location-text">The old palacekeeper will be sure to provide you with a cup of cold water and enough meal to last you 3 days.</p>
+
+                    </section>
+
+                    <section class="location-section-image">
+
+                        <img src="images/Tibet Attraction 1 (Potala Palace).jpg"
+                        class="location-image" alt="potala palace">
+
+                    </section>
+
+                </section>
+
+                <section class="location-section bottom-space">
+
+                    <section class="location-section-image">
+
+                        <img src="images/Tibet Attraction 2 (Mount Everest).jpg"
+                        class="location-image" alt="mount everest">
+
+                    </section>
+
+                    <section class="location-section-text">
+
+                        <p class="location-text">Oh, and last but definitely not least, we have Mt Everest.</p>
+                        <p class="location-text">Standing at 8,848m altitude (above sea level), this ebast has proved hard to ascend for generations.</p>
+                        <p class="location-text">Will you be the one to destroy this myth once and for all? Come on down and find out!</p>
+
+                    </section>
+
+                </section>
+
+                <!-- This button links to the Book a Stay page. Location
+                    dropdown will be autofilled from what page you're
+                    browsing -->
+                <button class="book-now bottom-space"
+                onclick="book_with_location('Tibetan Cave');">
+                <span>BOOK NOW</span></button>
+
+            </section>
+       
+        </main>
+
+        <!-- The footer is fixed to the bottom of the page and contains links
+            to the Privacy Policy, Terms and Conditions, and back to the 
+            homepage -->
+        <footer>
+
+            <a href="privacy policy.html">Privacy Policy</a>
+            <a href="index.html">© Tropical Paradise Ltd</a>
+            <a href="terms and conditions.html">Terms and Conditions</a>
+
+        </footer>
+
+    </body>
+
+    <!-- Implements page redirection when relevant button is pressed -->
+    <script src="js/script.js"></script>
+
+    <!-- For the side-nav link scrolling -->
+    <script src="js/script1.js"></script>
+
+    <!-- Store the current page in localStorage before redirecting to Book a
+        Stay when BOOK NOW button pressed -->
+    <script src="js/script2.js"></script>
+
+</html>

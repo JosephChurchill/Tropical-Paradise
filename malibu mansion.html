@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+
+<html>
+
+    <head>
+
+        <title>Tropical Paradise - Malibu Mansion</title>
+
+        <!-- Stylesheet for all pages -->
+        <link rel="stylesheet" href="css/style.css">
+
+    </head>
+
+    <body>
+
+        <!-- The header contains an icon and link to the homepage, and links
+            to different parts of the site on the right -->
+        <header>
+
+            <!-- Website icon embedded in <a> element to direct back to
+                homepage from anywhere in the site -->
+            <a href="index.html"><img class="website-icon"
+                src="images/icon.jpg"
+                alt="icon"></a>
+
+            <!-- Title redirects to homepage on click. Hidden when screen
+                width is narrower that 1200px -->
+            <a class="website-title" href="index.html">Tropical Paradise</a>
+
+            <!-- This is an empty element with auto right margin to make the
+                navigation links stick to right when the website title is
+                hidden due to narrower screen -->
+            <a class="website-title-alt"></a>
+
+            <!-- This navbar sticks to the right of the header and contains
+                navigation links -->
+            <nav>
+
+                <!-- The elements of this list are top-level navigation
+                    buttons -->
+                <ul class="header-links">
+
+                    <!-- A button to direct to the Book a Stay page -->
+                    <li><button class="header-link"
+                        onclick="button_click('book a stay.html');">
+                        BOOK A STAY</button></li>
+                    
+                    <!-- A locations dropdown menu appears when the user hovers
+                        over the LOCATIONS button -->
+                    <li class="dropdown">
+
+                        <!-- LOCATIONS button -->
+                        <button class="header-link">LOCATIONS</button>
+                        
+                        <!-- Dropdown menu links, not displayed initially -->
+                        <ul class=dropdown-content>
+
+                            <!-- These links redirect to the relevant Location
+                                page -->
+                            <li><a href="malibu mansion.html">
+                                Malibu Mansion</a></li>
+                            <li><a href="dubai apartment.html">
+                                Dubai Apartment</a></li>
+                            <li><a href="amazon treehouse.html">
+                                Amazon Treehouse</a></li>
+                            <li><a href="tibetan cave.html">
+                                Tibetan Cave</a></li>
+                            <li><a href="antarctic station.html">
+                                Antarctic Station</a></li>
+                            <li><a href="mumbai hotel.html">
+                                Mumbai Hotel</a></li>
+                            <li><a href="saharan bungalow.html">
+                                Saharan Bungalow</a></li>
+
+                        </ul>
+
+                    </li>
+
+                    <!-- More buttons -->
+                    <li><button class="header-link"
+                        onclick="button_click('about us.html');">
+                        ABOUT US</button></li>
+                    <li><button class="header-link"
+                        onclick="button_click('reviews.html');">
+                        REVIEWS</button></li>
+                    <li><button class="header-link"
+                        onclick="button_click('contact.html');">
+                        CONTACT</button></li>
+                    
+                </ul>
+
+            </nav>
+
+        </header>
+
+        <!-- This is the main section of the page, apart from the header and
+            footer -->
+        <main class="location-main">
+
+            <!-- Side nav bar to navigate different sections of page -->
+            <nav class="location-nav">
+                
+                <a class="location-nav-item">Accommodation</a>
+                <a class="location-nav-item">Facilities</a>
+                <a class="location-nav-item">Attractions</a>
+
+            </nav>
+
+            <!-- Contains all info about the loocation -->
+            <section class="location-info">
+
+                <!-- Half opaque image and location name heads the location
+                    page -->
+                <section class="location-header">
+
+                    <img class="location-header-image"
+                    src="images/Malibu Header.jpg"
+                    alt="mansion">
+                    <h1 class="location-header-text">Malibu Mansion</h1>
+                
+                </section>
+
+                <!-- ACCOMMODATION section contains a couple of paragraphs of
+                    text and an image -->
+                <h3 class="location-section-header" id="Accommodation">
+                    ACCOMMODATION</h3>
+
+                <section class="location-section">
+
+                    <section class="location-section-text">
+
+                        <p class="location-text">Malibu is one of the best-known areas worldwide for its expensive real estate and beatiful ocean views.</p>
+                        <p class="location-text">Located in sunny California, Mansiona, a 15th century castle renovated by a billionaire is up for rent - there's so many rooms we can house up to 1000 clients at once!</p>
+                        <p class="location-text">With world-class bathrooms and ecsdtatic kitchen appliances (see right), you're sure to have the time of your life here!</p>
+
+                    </section>
+
+                    <section class="location-section-image">
+
+                        <img src="images/Malibu Accomodation.jpg"
+                        alt="kitchen" class="location-image">
+
+                    </section>
+
+                </section>
+
+                <!-- FACILITIES section contains a couple of paragraphs and an
+                    image. Order of these two is different in different sections for aesthetics -->
+                <h3 class="location-section-header" id="Facilities">
+                    FACILITIES</h3>
+
+                <section class="location-section">
+
+                    <section class="location-section-image">
+
+                        <img src="images/Malibu Facilities.jpg"
+                        alt="poolside babes" class="location-image">
+
+                    </section>
+
+                    <section class="location-section-text">
+
+                        <p class="location-text">And of course you can't forget the pool!</p>
+                        <p class="location-text">Pools are a must have in all American mansions, however the coolest ones are here at Mansiona. We use AI to develop the perfect temperature in the pool.</p>
+                        <p class="location-text">And don't forget the beautiful babes lounging around the pool - they might just make your stay that bit more worthwhile!</p>
+
+                    </section>
+
+                </section>
+
+                <!-- 2x ATTRACTIONS sections (obviously only one header
+                    though) -->
+                <h3 class="location-section-header" id="Attractions">
+                    ATTRACTIONS</h3>
+
+                <section class="location-section bottom-space">
+
+                    <section class="location-section-text">
+
+                        <p class="location-text">The Golden Gate Bridge in San Francisco, California is one of the oldest standing structures know to man (top 80%)!</p>
+                        <p class="location-text">It's such a sight at night, when the LED lights along it light it up and make it look like something out of a Disney movie.</p>
+                        <p class="location-text">Just don't all get on it at once, as when people have done that in the past it didn't turn out quite right.</p>
+
+                    </section>
+
+                    <section class="location-section-image">
+
+                        <img src="images/Malibu Attraction 1 (Golden Gate Bridge).jpg"
+                        alt="golden gate bridge" class="location-image">
+
+                    </section>
+
+                </section>
+
+                <section class="location-section bottom-space">
+
+                    <section class="location-section-image">
+
+                        <img src="images/Malibu Attraction 2 (Yosemite).jpg"
+                        alt="yosemite national park" class="location-image">
+
+                    </section>
+
+                    <section class="location-section-text">
+
+                        <p class="location-text">Yosemite Nation Park is just down the street as well.</p>
+                        <p class="location-text">It was formed in the late cretaceous era by eco-aware saurapods that wanted a safe space for their descendants to munch on leaves.</p>
+                        <p class="location-text">A few people have gone missing here, so be sure to remember the three big words if you happen to encounter a mountain lion during your visit: RUN, RUN, RUN!</p>
+
+                    </section>
+
+                </section>
+
+                <!-- This button links to the Book a Stay page. Location
+                    dropdown will be autofilled from what page you're
+                    browsing -->
+                <button class="book-now bottom-space"
+                onclick="book_with_location('Malibu Mansion');">
+                <span>BOOK NOW</span></button>
+
+            </section>
+       
+        </main>
+
+        <!-- The footer is fixed to the bottom of the page and contains links
+            to the Privacy Policy, Terms and Conditions, and back to the
+            homepage -->
+        <footer>
+
+            <a href="privacy policy.html">Privacy Policy</a>
+            <a href="index.html">© Tropical Paradise Ltd</a>
+            <a href="terms and conditions.html">Terms and Conditions</a>
+
+        </footer>
+
+    </body>
+
+    <!-- Implements page redirection when relevant button is pressed -->
+    <script src="js/script.js"></script>
+
+    <!-- For the side-nav link scrolling -->
+    <script src="js/script1.js"></script>
+
+    <!-- Store the current page in localStorage before redirecting to Book a
+        Stay when BOOK NOW button pressed -->
+    <script src="js/script2.js"></script>
+
+</html>

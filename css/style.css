@@ -1,0 +1,825 @@
+/* Variables for custome colours used frequently */
+:root {
+    --black: #222;
+    --grey: #255;
+    --red: #F00;
+    --pink: #FCC;
+    --white: #EFEFEF;
+}
+
+/* Give all items these properties. No unwanted whitespace, proper container
+dimensions and smooth scrolling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    scroll-behavior: smooth;
+}
+
+/* This is useful for pages that do not scroll, for bodies that do scroll
+we need to make the divs inside taller. In general items are centred,
+overridden by individual items */
+body {
+    height: 100vh;
+    align-items: center;
+}
+
+/* This is the fixed header at the top of every page. z-index to make the
+location dropdown come to front */
+header {
+    width: 100%;
+    height: 10vmin;
+    max-height: 10vmin;
+    background-color: var(--black);
+    display: inline-flex;
+    align-items: center;
+    position: fixed;
+    z-index: 1;
+}
+
+/* Icon in top left. Resizes with header */
+.website-icon {
+    width: 8vin;
+    height: 8vmin;
+    object-fit: cover;
+    padding-left: 1vmin;
+}
+
+/* Header link to the homepage */
+.website-title {
+    color: var(--red);
+    font-size: 5.5vmin;
+    font-weight: 550;
+    text-decoration: none;
+    padding: 1vmin 1vmin 1vmin 2vmin;
+    margin-right: auto;
+}
+
+/* Header homepage link invisible with narrow screen */
+@media screen and (max-width: 1250px) {
+    .website-title {
+        display: none;
+    }
+}
+
+/* This is an empty element with auto right margin to make the navigation links
+stick to right when the website title is hidden due to narrower screen */
+.website-title-alt {
+    width: 0;
+    margin-right: auto;
+}
+
+/* The buttons on the right of header to link to other pages */
+.header-link {
+    padding: 3.3vmin 1.5vmin 3.8vmin 1.5vmin;
+    font-size: 2.5vmin;
+    text-decoration: none;
+    color: var(--red);
+    margin: 0;
+    vertical-align: center;
+    top: 0;
+    background-color: var(--black);
+    font-family: inherit;
+    border: 0;
+}
+
+/* On hove rover header buttons, change colour */
+.header-link:hover, .header-link:hover {
+    background-color: var(--grey);
+    cursor: pointer;
+}
+
+/* List of header link */
+.header-links {
+    display: inline-flex;
+    flex-direction: row;
+}
+
+/* Each item in the list contains a button */
+.header-links li {
+    list-style: none;
+    position: relative;
+}
+
+/* The dropdown box. Translated to center with its button. Transition
+makes it fade in. Also has shadow. hidden initially */
+.dropdown-content {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+    list-style: none;
+    margin: 0;
+    display: block;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 400ms;
+    overflow: hidden;
+    padding: 0;
+    box-shadow: 0 1vmin 2vmin 0 var(--grey);
+}
+
+/* Each item in the dropdown */
+.dropdown-content li {
+    width: 20vmin;
+    margin: 0;
+    background-color: var(--black);
+    text-align: center;
+    vertical-align: center;
+    border: var(--white) 0.2vmin solid;
+    cursor: pointer;
+    list-style: none;
+}
+
+/* Each list item contains a link */
+.dropdown-content li a {
+    color: var(--red);
+    font-size: 2vmin;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    display: block;
+    padding: 1vmin 0 1vmin 0;
+}
+
+/* On hover over button or dropdown, dropdown visible */
+.dropdown:hover .dropdown-content {
+    visibility: visible;
+    opacity: 1;
+}
+
+/* dropdown items are grey on hover */
+.dropdown-content li:hover {
+    background-color: var(--grey);
+}
+
+/* Main section on all pages default. Padding for fixed header/footer */
+main {
+    width: 100%;
+    padding: 10vmin 0 7vmin 0;
+}
+
+/* specific to homepage main */
+#homepage-main {
+    padding-bottom: 0;
+}
+
+/* homepage and booking main are similar */
+#homepage-main, #book-a-stay-main {
+    background-color: var(--pink);
+    color: var(--black);
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+}
+
+/* div for text on left of homepage */
+#homepage-texts {
+    width: 60%;
+}
+
+/* Text div on homepage and booking page are similar */
+#homepage-texts, #book-a-stay-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 100%;
+    margin: auto;
+}
+
+/* Heading title text */
+#homepage-title {
+    font-size: 7vmin;
+    font-weight: 600;
+    margin: auto 0 3vmin 0;
+    position: relative;
+    font-style: italic;
+}
+
+/* smaller subtitle text */
+#homepage-subtitle, #book-a-stay-subtitle {
+    font-size: 4vmin;
+    font-weight: 550;
+    margin: 3vmin 0 3vmin 0;
+    width: 67%;
+}
+
+/* BOOK NOW button. Animation customised from
+https://www.w3schools.com/howto/howto_css_animate_buttons.asp */
+.book-now {
+    background-color: var(--red);
+    font-size: 3vmin;
+    padding: 2vmin;
+    font-family: inherit;
+    font-weight: 550;
+    border-radius: 2vmin;
+    border-color: #F05;
+    border-width: 0.7vmin;
+    transition: content 0.3s, border-color 0.5s, focus 0.5s;
+    cursor: pointer;
+    outline: none;
+    margin: 3vmin 0 auto 0;
+}
+
+/* border for hover on BOOK NOW button */
+.book-now:hover, .book-now:focus {
+    border-color: var(--black);
+}
+
+/* span for BOOK NOW button content */
+.book-now span {
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+}
+
+/* Add arrow after hover */
+.book-now span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+}
+
+/* change button size on hover */
+.book-now:hover span {
+    padding-right: 25px;
+}
+
+/* for arrow text to appear */
+.book-now:hover span:after {
+    opacity: 1;
+    right: 0;
+}
+
+/* div for images on right of homepage */
+#homepage-images {
+    width: 40%;
+}
+
+/* RHS of homepage and booking page */
+#homepage-images, #book-a-stay-form {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* First image is rotated this way */
+#homepage-images :first-child {
+    height: 60vh;
+    width: 30vw;
+    object-fit: cover;
+    margin: auto;
+    border: var(--white) 1.5vmin solid;
+    transform: rotate(5deg);
+    position: fixed;
+}
+
+/* now second image */
+#homepage-images :nth-child(2) {
+    height: 30vh;
+    width: 20vw;
+    object-fit: cover;
+    margin: auto;
+    left: 57vw;
+    bottom: 25vh;
+    border: var(--white) 0.75vmin solid;
+    transform: rotate(-10deg);
+    position: fixed;
+}
+
+/* make homapage rearrange on small screen */
+@media screen and (max-width: 900px) {
+    #homepage-texts {
+        width: 100%;
+    }
+
+    #homepage-images {
+        display: none;
+    }
+}
+
+/* text on booking page half the screen */
+#book-a-stay-text {
+    width: 50%;
+}
+
+/* Form also */
+#book-a-stay-form {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Each section margin auto for vertical alignment */
+.book-a-stay-form-section {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: auto;
+}
+
+/* Entries on the booking form */
+.book-a-stay-entry {
+    width: 25%;
+    padding: 1.2vmin 1.5vmin;
+    text-align: center;
+    font-size: 2vmin;
+    border-width: 0.5vmin;
+    border-radius: 2vmin;
+    border-color: var(--red);
+    margin: auto;
+    transition: border-color 500ms;
+    outline: none;
+}
+
+/* entry width cp to div width */
+#date-entry, #location-entry {
+    width: 30%;
+}
+
+/* transition here on focus on etries */
+.book-a-stay-entry:focus {
+    border-color: var(--black);
+}
+
+/* Change booking arrangement on screen change */
+@media screen and (max-width: 1200px) {
+    #book-a-stay-text {
+        width: 40%;
+    }
+
+    #book-a-stay-form {
+        width: 60%;
+    }
+
+    .book-a-stay-entry {
+        width: 30%;
+        font-size: 2.5vmin;
+    }
+
+    #location-entry {
+        width: 35%;
+    }
+}
+
+/* different changes for smaller screen, mainly for enty width */
+@media screen and (max-width: 900px) {
+    #book-a-stay-main {
+        display: block;
+    }
+
+    #book-a-stay-text {
+        height: 30%;
+        width: 100%;
+    }
+
+    #book-a-stay-form {
+        height: 70%;
+        width: 100%;
+    }
+
+    .book-a-stay-entry {
+        font-size: 3vmin;
+        width: 30%;
+    }
+}
+
+/* select location */
+#please-select {
+    font-weight: 600;
+}
+
+/* popup booking confirm */
+#booked-popup {
+    width: 40%;
+    min-width: 300px;
+    background-color: var(--red);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: none;
+    flex-direction: column;
+    border-radius: 2vmin;
+    align-items: center;
+    overflow: hidden;
+    border: 0.5vmin var(--black) solid;
+}
+
+/* popup font */
+#booked-popup strong, #booked-popup p, #booked-popup button {
+    font-size: 3vmin;
+}
+
+/* button for popup */
+#booked-popup button {
+    border-radius: 1vmin;
+    padding: 0.5vmin;
+}
+
+/* location page main div */
+.location-main {
+    display: flex;
+    flex-direction: row;
+    padding: 10vmin 0 0 0;
+}
+
+/* nav bar on left */
+.location-nav {
+    width: 25vmin;
+    background-color: var(--grey);
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    height: 100%;
+}
+
+/* for nav bar links */
+.location-nav:first-child {
+    padding-top: 3vmin;
+}
+
+.location-nav a {
+    font-size: 3vmin;
+    padding: 1vmin 0 1vmin 2vmin;
+    margin: 1vmin 0 1vmin 0;
+    text-decoration: none;
+    color: var(--black);
+    cursor: pointer;
+}
+
+.location-nav a:hover {
+    color: #2AA;
+}
+
+/* RHS is location info */
+.location-info {
+    margin-left: 25vmin;
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* image header */
+.location-header {
+    height: 30vmin;
+    width: 100%;
+    font-size: 6vmin;
+    font-weight: bold;
+    color: var(--black);
+    position: relative;
+    text-align: center;
+}
+
+/* format images */
+.location-header-image {
+    height: 30vmin;
+    width: 100%;
+    object-fit: cover;
+    opacity: 0.5;
+}
+
+/* format texts */
+.location-header-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: fit-content;
+}
+
+/* format text sections */
+.location-section-header {
+    font-size: 4vmin;
+    margin: 10vmin auto;
+    text-align: center;
+    scroll-margin: 80px;
+}
+
+/* format texts on here and about us page */
+.location-section, .about-us-section {
+    width: 80%;
+    height: fit-content;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+/* individual text section */
+.location-section-text {
+    width: 60%;
+    height: 100%;
+    font-size: 2.5vmin;
+}
+
+/* one paragraph */
+.location-text {
+    margin: 0 10% 5vmin 10%;
+    text-align: justify;
+    line-height: 3.5vmin;
+}
+
+/* last one different margin */
+.location-text:last-child {
+    margin-bottom: 0;
+}
+
+/* format image section */
+.location-section-image {
+    width: 40%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* background-color: red; */
+}
+
+/* format images */
+.location-image {
+    width: 30vmin;
+    height: 30vmin;
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: cover;
+    vertical-align: bottom;
+    border-radius: 1.5vmin;
+    border-style: solid;
+    border-width: 0.2vmin;
+}
+
+/* for space at bottom of page */
+.bottom-space {
+    margin-bottom: 10vmin;
+}
+
+/* about us main section */
+#about-us-main {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 10vmin 0 0 0;
+}
+
+/* headers for lots of pages */
+#about-us-header, #reviews-header, #contact-header, #privacy-header,
+#terms-header {
+    font-size: 7vmin;
+    margin: 10vmin 10%;
+}
+
+/* about us text section */
+.about-us-section {
+    width: 80%;
+}
+
+/* text in section */
+.about-us-section-text {
+    width: 100%;
+    font-size: 3vmin;
+}
+
+/* paragraph in section */
+.about-us-paragraph {
+    margin-bottom: 5vmin;
+    line-height: 4vmin;
+}
+
+/* First letter large */
+.about-us-paragraph a {
+    font-size: 10vmin;
+}
+
+/* last one different */
+.about-us-paragraph:last-child {
+    padding-bottom: 5vmin;
+}
+
+/* format images */
+.about-us-image {
+    width: 40vmin;
+    height: 40vmin;
+    margin: 0 0 10vmin 10vmin;
+}
+
+/* unavailable page main div */
+#page-unavailable-main {
+    width: 80%;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    color: var(--black);
+}
+
+/* robot image */
+#page-unavailable-image {
+    width: 15vw;
+    height: 15vw;
+    margin-top: 10vh;
+}
+
+/* text for page */
+#page-unavailable-main section {
+    display: flex;
+    flex-direction: column;
+}
+
+/* header in text */
+#page-unavailable-main section h1 {
+    margin-left: 5vw;
+    margin-top: 10vh;
+    font-size: 4.5vmin;
+}
+
+/* sub header */
+#page-unavailable-main section h2 {
+    margin-left: 5vw;
+    margin-top: 5vh;
+    font-size: 3vmin;
+}
+
+/* review main section */
+#reviews-main {
+    display: flex;
+    flex-direction: column;
+    color: var(--black);
+}
+
+/* submit review header */
+#submit-review-header {
+    font-size: 5vmin;
+    margin: 10vmin 0;
+    text-align: center;
+}
+
+/* write review box */
+.customer-review {
+    display: flex;
+    flex-direction: row;
+    font-size: 3vmin;
+    margin-bottom: 10vmin;
+    align-items: center;
+    justify-content: center;
+}
+
+/* images profile */
+.customer-review img {
+    width: 6vw;
+    height: 6vw;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+/* para for customer review box */
+.customer-review p1 {
+    width: 20%;
+    text-align: center;
+    font-weight: 550;
+    padding: 0 0 0 10%;
+}
+
+.customer-review p2 {
+    width: 50%;
+    text-align: center;
+    padding: 0 0 0 10%;
+    box-sizing: border-box;
+    position: relative;
+    right: 0;
+}
+
+/* box for write */
+#user-review {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+/* enter review */
+#review-entry {
+    width: 50vw;
+    height: 30vmin;
+    font-size: 3vmin;
+    margin-left: 10vmin;
+    padding: 3vmin;
+    border-radius: 2vmin;
+    border-width: 0.5vmin;
+    border-color: var(--black);
+}
+
+/* entry and button */
+#review-name-and-button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 40vw;
+    height: 30vmin;
+}
+
+/* enter name */
+#review-name {
+    width: 30vw;
+    max-width: 250px;
+    font-size: 3vmin;
+    padding: 1vmin;
+    border-radius: 1.5vmin;
+    border-width: 0.5vmin;
+    border-color: var(--black);
+    text-align: center;
+    margin: auto;
+}
+
+/* button */
+#submit-review {
+    font-size: 3vmin;
+    width: fit-content;
+    border-radius: 1vmin;
+    padding: 1vmin;
+    margin: auto;
+}
+
+/* contact us section */
+.contact-section {
+    margin: 0 0 10vmin 10%;
+    width: 85%;
+    display: flex;
+    flex-direction: row;
+    font-size: 2.8vmin;
+    line-height: 4vmin;
+}
+
+.contact-type {
+    width: 30%;
+    text-align: center;
+    font-weight: 600;
+}
+
+/* privacy policy para */
+#privacy-main p {
+    width: 80%;
+    margin: auto;
+    font-size: 3vmin;
+    line-height: 4.5vmin;
+    margin-bottom: 4vmin;
+}
+
+/* ordered list formatting */
+#privacy-main ol {
+    font-size: 3vmin;
+    width: 77vw;
+}
+
+#privacy-main > ol > li {
+    margin-bottom: 3vmin;
+}
+
+#privacy-main li {
+    margin-top: 2vmin;
+}
+
+#privacy-main > ol {
+    margin-left: 11.5vw;
+}
+
+#privacy-main > ol ol {
+    margin-left: 2vw;
+}
+
+/* fixed footer on all pages */
+footer {
+    background-color: var(--black);
+    height: 7vmin;
+    width:100%;
+    color: var(--red);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+}
+
+/* For the single-screen pages */
+.fixed-footer {
+    position: fixed;
+    bottom: 0;
+}
+
+/* links in footer */
+footer a {
+    color: red;
+    text-decoration: none;
+    margin: auto;
+    padding: 1vmin;
+    font-size: 2vmin;
+}

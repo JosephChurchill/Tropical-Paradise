@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+
+<html>
+
+    <head>
+
+        <title>Tropical Paradise - Saharan Bungalow</title>
+
+        <!-- Stylesheet for all pages -->
+        <link rel="stylesheet" href="css/style.css">
+
+    </head>
+
+    <body>
+
+        <!-- The header contains an icon and link to the homepage, and links to
+            different parts of the site on the right -->
+        <header>
+
+            <!-- Website icon embedded in <a> element to direct back to
+                homepage from anywhere in the site -->
+            <a href="index.html"><img class="website-icon"
+                src="images/icon.jpg"
+                alt="icon"></a>
+
+            <!-- Title redirects to homepage on click. Hidden when screen width
+                is narrower that 1200px -->
+            <a class="website-title" href="index.html">Tropical Paradise</a>
+
+            <!-- This is an empty element with auto right margin to make the
+                navigation links stick to right when the website title is
+                hidden due to narrower screen -->
+            <a class="website-title-alt"></a>
+
+            <!-- This navbar sticks to the right of the header and contains
+                navigation links -->
+            <nav>
+
+                <!-- The elements of this list are top-level navigation
+                    buttons -->
+                <ul class="header-links">
+
+                    <!-- A button to direct to the Book a Stay page -->
+                    <li><button class="header-link"
+                        onclick="button_click('book a stay.html');">
+                        BOOK A STAY</button></li>
+                    
+                    <!-- A locations dropdown menu appears when the user hovers
+                        over the LOCATIONS button -->
+                    <li class="dropdown">
+
+                        <!-- LOCATIONS button -->
+                        <button class="header-link">LOCATIONS</button>
+                        
+                        <!-- Dropdown menu links, not displayed initially -->
+                        <ul class=dropdown-content>
+
+                            <!-- These links redirect to the relevant Location
+                                page -->
+                            <li><a href="malibu mansion.html">
+                                Malibu Mansion</a></li>
+                            <li><a href="dubai apartment.html">
+                                Dubai Apartment</a></li>
+                            <li><a href="amazon treehouse.html">
+                                Amazon Treehouse</a></li>
+                            <li><a href="tibetan cave.html">
+                                Tibetan Cave</a></li>
+                            <li><a href="antarctic station.html">
+                                Antacrtic Station</a></li>
+                            <li><a href="mumbai hotel.html">
+                                Mumbai Hotel</a></li>
+                            <li><a href="saharan bungalow.html">
+                                Saharan Bungalow</a></li>
+
+                        </ul>
+
+                    </li>
+
+                    <!-- More buttons -->
+                    <li><button class="header-link"
+                        onclick="button_click('about us.html');">
+                        ABOUT US</button></li>
+                    <li><button class="header-link"
+                        onclick="button_click('reviews.html');">
+                        REVIEWS</button></li>
+                    <li><button class="header-link"
+                        onclick="button_click('contact.html');">
+                        CONTACT</button></li>
+                    
+                </ul>
+
+            </nav>
+
+        </header>
+
+        <!-- This is the main section of the page, apart from the header and
+            footer -->
+        <main class="location-main">
+
+            <!-- Side nav bar to navigate different sections of page -->
+            <nav class="location-nav">
+                
+                <a class="location-nav-item">Accommodation</a>
+                <a class="location-nav-item">Facilities</a>
+                <a class="location-nav-item">Attractions</a>
+
+            </nav>
+
+            <!-- Contains all info about the loocation -->
+            <section class="location-info">
+
+                <!-- Half opaque image and location name heads the location
+                    page -->
+                <section class="location-header">
+
+                    <img class="location-header-image"
+                    src="images/Saharan Header.jpg"
+                    alt="sahara desert">
+                    <h1 class="location-header-text">Saharan Bungalow</h1>
+                
+                </section>
+
+                <!-- ACCOMMODATION section contains a couple of paragraphs of
+                    text and an image -->
+                <h3 class="location-section-header" id="Accommodation">
+                    ACCOMMODATION</h3>
+
+                <section class="location-section">
+
+                    <section class="location-section-text">
+
+                        <p class="location-text">Oh the Sahara Desert - the very name brings back fond memories of when this antique spot was once a vast oasis.</p>
+                        <p class="location-text">Now it's a bleak desert with a few nomads ranging it, but that doesn't matter, it's history all the same!</p>
+                        <p class="location-text">If you happen to find a hut in the middle of nowhere, it's ours and you're welcome to stay the night. No-one else will want it.</p>
+
+                    </section>
+
+                    <section class="location-section-image">
+
+                        <img src="images/Sahara Accomodation.jpg"
+                        alt="huts in the desert"
+                        class="location-image">
+
+                    </section>
+
+                </section>
+
+                <!-- FACILITIES section contains a couple of paragraphs and an
+                    image. Order of these two is different in different
+                    sections for aesthetics -->
+                <h3 class="location-section-header" id="Facilities">
+                    FACILITIES</h3>
+
+                <section class="location-section">
+
+                    <section class="location-section-image">
+
+                        <img src="images/Sahara Facilities.jpg"
+                        alt="toilet in the desert"
+                        class="location-image">
+
+                    </section>
+
+                    <section class="location-section-text">
+
+                        <p class="location-text">Every few miles along the high silk road you'll come across a WC (water closet).</p>
+                        <p class="location-text">But don't be afraid, they're friendly and won't bite!</p>
+                        <p class="location-text">But maybe the line of creatures waiting outside it will when you try to push past them. But pay no heed - continue in your endeavours!</p>
+
+                    </section>
+
+                </section>
+
+                <!-- 2x ATTRACTIONS sections (obviously only one header
+                    though) -->
+                <h3 class="location-section-header" id="Attractions">
+                    ATTRACTIONS</h3>
+
+                <section class="location-section bottom-space">
+
+                    <section class="location-section-text">
+
+                        <p class="location-text">The Richat Structure is one of the Sahara's key tourist attractions.</p>
+                        <p class="location-text">It was formed over 100 million years ago when there was an alien invasion and a spaceship crashed.</p>
+                        <p class="location-text">There's still some quicksand areas scattered around from the craft's throttle engines, so do be careful when meandering about.</p>
+
+                    </section>
+
+                    <section class="location-section-image">
+
+                        <img src="images/Sahara Attraction 1 (Richat Structure).jpg"
+                        alt="desert formation" class="location-image">
+
+                    </section>
+
+                </section>
+
+                <section class="location-section bottom-space">
+
+                    <section class="location-section-image">
+
+                        <img src="images/Sahara Attraction 2 (Gebel Dist).jpg"
+                        alt="desert mountain" class="location-image">
+
+                    </section>
+
+                    <section class="location-section-text">
+
+                        <p class="location-text">Gebel Dist is a very old mountain, and not to be confused with the pyramids of Giza. It's likely even older than those!</p>
+                        <p class="location-text">It's said there's an oasis on top where you can eat fresh dates, however no man has survived it's rocky outcrop to return and tell the tale.</p>
+                        <p class="location-text">Are you game enough to find out?</p>
+
+                    </section>
+
+                </section>
+
+                <!-- This button links to the Book a Stay page. Location
+                    dropdown will be autofilled from what page you're browsing -->
+                <button class="book-now bottom-space"
+                onclick="book_with_location('Saharan Bungalow');">
+                <span>BOOK NOW</span></button>
+
+            </section>
+       
+        </main>
+
+        <!-- The footer is fixed to the bottom of the page and contains links
+            to the Privacy Policy, Terms and Conditions, and back to the
+            homepage -->
+        <footer>
+
+            <a href="privacy policy.html">Privacy Policy</a>
+            <a href="index.html">© Tropical Paradise Ltd</a>
+            <a href="terms and conditions.html">Terms and Conditions</a>
+
+        </footer>
+
+    </body>
+
+    <!-- Implements page redirection when relevant button is pressed -->
+    <script src="js/script.js"></script>
+
+    <!-- For the side-nav link scrolling -->
+    <script src="js/script1.js"></script>
+
+    <!-- Store the current page in localStorage before redirecting to Book a
+        Stay when BOOK NOW button pressed -->
+    <script src="js/script2.js"></script>
+
+</html>

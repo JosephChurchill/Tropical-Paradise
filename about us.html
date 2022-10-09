@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+
+<html>
+
+    <head>
+
+        <title>Tropical Paradise - About us</title>
+
+        <!-- Stylesheet for all pages -->
+        <link rel="stylesheet" href="css/style.css">
+
+    </head>
+
+    <body>
+
+        <!-- The header contains an icon and link to the homepage, and links to
+            different parts of the site on the right -->
+        <header>
+
+            <!-- Website icon embedded in <a> element to direct back to
+                homepage from anywhere in the site -->
+            <a href="index.html"><img class="website-icon"
+                src="images/icon.jpg"
+                alt="icon"></a>
+
+            <!-- Title redirects to homepage on click. Hidden when screen width
+                is narrower that 1200px -->
+            <a class="website-title" href="index.html">Tropical Paradise</a>
+
+            <!-- This is an empty element with auto right margin to make the
+                navigation links stick to right when the website title is
+                hidden due to narrower screen -->
+            <a class="website-title-alt"></a>
+
+            <!-- This navbar sticks to the right of the header and contains
+                navigation links -->
+            <nav>
+
+                <!-- The elements of this list are top-level navigation
+                    buttons -->
+                <ul class="header-links">
+
+                    <!-- A button to direct to the Book a Stay page -->
+                    <li><button class="header-link"
+                        onclick="button_click('book a stay.html');"
+                        >BOOK A STAY</button></li>
+                    
+                    <!-- A locations dropdown menu appears when the user hovers
+                        over the LOCATIONS button -->
+                    <li class="dropdown">
+
+                        <!-- LOCATIONS button -->
+                        <button class="header-link">LOCATIONS</button>
+                        
+                        <!-- Dropdown menu links, not displayed initially -->
+                        <ul class=dropdown-content>
+
+                            <!-- These links redirect to the relevant Location
+                                page -->
+                            <li><a href="malibu mansion.html">
+                                Malibu Mansion</a></li>
+                            <li><a href="dubai apartment.html">
+                                Dubai Apartment</a></li>
+                            <li><a href="amazon treehouse.html">
+                                Amazon Treehouse</a></li>
+                            <li><a href="tibetan cave.html">
+                                Tibetan Cave</a></li>
+                            <li><a href="antarctic station.html">
+                                Antarctic Station</a></li>
+                            <li><a href="mumbai hotel.html">
+                                Mumbai Hotel</a></li>
+                            <li><a href="saharan bungalow.html">
+                                Saharan Bungalow</a></li>
+
+                        </ul>
+
+                    </li>
+
+                    <!-- More buttons -->
+                    <li><button class="header-link"
+                        onclick="button_click('about us.html');">
+                        ABOUT US</button></li>
+                    <li><button class="header-link"
+                        onclick="button_click('reviews.html');">
+                        REVIEWS</button></li>
+                    <li><button class="header-link"
+                        onclick="button_click('contact.html');">
+                        CONTACT</button></li>
+                    
+                </ul>
+
+            </nav>
+
+        </header>
+
+        <!-- This is the main section of the page, apart from the header and
+            footer -->
+        <main id="about-us-main">
+
+            <!-- About us heading -->
+            <h1 id="about-us-header">A bit about us ...</h1>
+
+            <section class="about-us-section">
+
+                <!-- Text about us with embedded image -->
+                <section class="about-us-section-text">
+
+                    <p class="about-us-paragraph"><img
+                        src="images/Sandcastle History.jpg"
+                        class="location-image about-us-image" align="right"
+                        alt="two boys at beach">
+                        <a>I</a>t all started in 1904 when two young Australian
+                        boys (John and Jack) built a sandcastle. Following
+                        their debut success, the pair went on to found John
+                        and Jack’s Hostel in Kentucky, USA. After twenty years
+                        in the business they broadened their venture, buying
+                        up most of the large infrastructure in the state. It
+                        was at this point that the idea of Tropical Paradise
+                        was born.</p>
+                    <p class="about-us-paragraph">John and Jack, one of the
+                        wealthiest duos in the history of the planet, wanted a
+                        place to wind down after a long week. They both had
+                        their weird eccentricities (Jack was weirder), so what
+                        better spot could they settle on than a hut in the
+                        middle of the Sahara Desert! The year 1976 saw the
+                        creation of the first ever Tropical Paradise resort,
+                        what we now as Saharan Bungalow. This was a resort
+                        where eccentric billionaires could pay an exorbitant
+                        price for a weekend away from the toils and tears of
+                        working life.</p>
+                    <p class="about-us-paragraph">Other resorts followed in the
+                        next years, with a Tibetan Cave opening for business in
+                        1981 and the company buying up part of Antarctica so
+                        you could pitch a tent there in ’85. These days there
+                        are a range of 7 different resort locations to choose
+                        from for your next vacation.</p>
+                    <br>
+                    <p class="about-us-paragraph">We always make sure to donate
+                        to charities, with $17,000 USD reported as donations in
+                        the five-year period since July 2009. We are the
+                        primary donor for the Sassy Cats Research Foundation,
+                        an institute dedicated to the research and protection
+                        of sassy felines. We have also donated to larger
+                        charities in the past, including the Heart Liver
+                        Disease Foundation and the Institute for Protection of
+                        Addresses.</p>
+                    <br>
+                    <p class="about-us-paragraph">We’ve partnered with a tonne
+                        of big brands, including Dove and Big Roy’s Heating and
+                        Plumbing, promoting their businesses from our extensive
+                        reach in the industry in return for free products and
+                        services to stock and service our resorts. We encourage
+                        you to come join us in one of our amazing holiday
+                        resorts! You will receive a complimentary bar of Dove
+                        soap with every stay in some of our resorts!</p>
+
+                </section>
+
+            </section>
+       
+        </main>
+
+        <!-- The footer is fixed to the bottom of the page and contains links
+            to the Privacy Policy, Terms and Conditions, and back to the
+            homepage -->
+        <footer>
+
+            <a href="privacy policy.html">Privacy Policy</a>
+            <a href="index.html">© Tropical Paradise Ltd</a>
+            <a href="terms and conditions.html">Terms and Conditions</a>
+
+        </footer>
+
+    </body>
+
+    <!-- Implements page redirection when relevant button is pressed -->
+    <script src="js/script.js"></script>
+
+</html>

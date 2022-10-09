@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+
+<html>
+
+    <head>
+
+        <title>Tropical Paradise - Mumbai Hotel</title>
+
+        <!-- Stylesheet for all pages -->
+        <link rel="stylesheet" href="css/style.css">
+
+    </head>
+
+    <body>
+
+        <!-- The header contains an icon and link to the homepage, and links
+            to different parts of the site on the right -->
+        <header>
+
+            <!-- Website icon embedded in <a> element to direct back to
+                homepage from anywhere in the site -->
+            <a href="index.html"><img class="website-icon"
+                src="images/icon.jpg"
+                alt="icon"></a>
+
+            <!-- Title redirects to homepage on click. Hidden when screen
+                width is narrower that 1200px -->
+            <a class="website-title" href="index.html">Tropical Paradise</a>
+
+            <!-- This is an empty element with auto right margin to make the
+                navigation links stick to right when the website title is
+                hidden due to narrower screen -->
+            <a class="website-title-alt"></a>
+
+            <!-- This navbar sticks to the right of the header and contains
+                navigation links -->
+            <nav>
+
+                <!-- The elements of this list are top-level navigation
+                    buttons -->
+                <ul class="header-links">
+
+                    <!-- A button to direct to the Book a Stay page -->
+                    <li><button class="header-link"
+                        onclick="button_click('book a stay.html');">
+                        BOOK A STAY</button></li>
+                    
+                    <!-- A locations dropdown menu appears when the user hovers
+                        over the LOCATIONS button -->
+                    <li class="dropdown">
+
+                        <!-- LOCATIONS button -->
+                        <button class="header-link">LOCATIONS</button>
+                        
+                        <!-- Dropdown menu links, not displayed initially -->
+                        <ul class=dropdown-content>
+
+                            <!-- These links redirect to the relevant Location
+                                page -->
+                            <li><a href="malibu mansion.html">
+                                Malibu Mansion</a></li>
+                            <li><a href="dubai apartment.html">
+                                Dubai Apartment</a></li>
+                            <li><a href="amazon treehouse.html">
+                                Amazon Treehouse</a></li>
+                            <li><a href="tibetan cave.html">
+                                Tibetan Cave</a></li>
+                            <li><a href="antarctic station.html">
+                                Antarctic Station</a></li>
+                            <li><a href="mumbai hotel.html">
+                                Mumbai Hotel</a></li>
+                            <li><a href="saharan bungalow.html">
+                                Saharan Bungalow</a></li>
+
+                        </ul>
+
+                    </li>
+
+                    <!-- More buttons -->
+                    <li><button class="header-link"
+                        onclick="button_click('about us.html');">
+                        ABOUT US</button></li>
+                    <li><button class="header-link"
+                        onclick="button_click('reviews.html');">
+                        REVIEWS</button></li>
+                    <li><button class="header-link"
+                        onclick="button_click('contact.html');">
+                        CONTACT</button></li>
+                    
+                </ul>
+
+            </nav>
+
+        </header>
+
+        <!-- This is the main section of the page, apart from the header and
+            footer -->
+        <main class="location-main">
+
+            <!-- Side nav bar to navigate different sections of page -->
+            <nav class="location-nav">
+                
+                <a class="location-nav-item">Accommodation</a>
+                <a class="location-nav-item">Facilities</a>
+                <a class="location-nav-item">Attractions</a>
+
+            </nav>
+
+            <!-- Contains all info about the loocation -->
+            <section class="location-info">
+
+                <!-- Half opaque image and location name heads the location
+                    page -->
+                <section class="location-header">
+
+                    <img class="location-header-image"
+                    src="images/Mumbai Header (Building).jpg"
+                    alt="mumbai house">
+                    <h1 class="location-header-text">Mumbai Hotel</h1>
+                
+                </section>
+
+                <!-- ACCOMMODATION section contains a couple of paragraphs of
+                    text and an image -->
+                <h3 class="location-section-header" id="Accommodation">
+                    ACCOMMODATION</h3>
+
+                <section class="location-section">
+
+                    <section class="location-section-text">
+
+                        <p class="location-text">This hotel in Mumbai offers the best accommodation you could ever wish for. The rooms are spacious and there are always complimentary drinks and snacks.</p>
+                        <p class="location-text">The beds are oh so soft and the pillows are fluffy. There are even chairs! Sit back and relax as you watch TV or gaze out the window at the amazing views Mumbai has to offer.</p>
+
+                    </section>
+
+                    <section class="location-section-image">
+
+                        <img src="images/Mumbai Accomodation.jpg"
+                        alt="bedroom"
+                        class="location-image">
+
+                    </section>
+
+                </section>
+
+                <!-- FACILITIES section contains a couple of paragraphs and an
+                    image. Order of these two is different in different sections for aesthetics -->
+                <h3 class="location-section-header" id="Facilities">
+                    FACILITIES</h3>
+
+                <section class="location-section">
+
+                    <section class="location-section-image">
+
+                        <img src="images/Mumbai Facilities.jpg"
+                        alt="bathroom"
+                        class="location-image">
+
+                    </section>
+
+                    <section class="location-section-text">
+
+                        <p class="location-text">The hotel room also comes with awesome facilities that you can enjoy to your heart's content.</p>
+                        <p class="location-text">There's a bathroom with a flushable toilet and a small shower where you can stand under the unequivocally harsh flow of those flat shower heads we know so very well.</p>
+                        <p class="location-text">There is also room service - our friendly staff will tend to your every need!</p>
+
+                    </section>
+
+                </section>
+
+                <!-- 2x ATTRACTIONS sections (obviously only one header
+                    though) -->
+                <h3 class="location-section-header" id="Attractions">
+                    ATTRACTIONS</h3>
+
+                <section class="location-section bottom-space">
+
+                    <section class="location-section-text">
+
+                        <p class="location-text">And don't forget Mumbai's tourist attractions!</p>
+                        <p class="location-text">There's the Gateway of India (see right) which has stood for over a hundred years. It was built by King George when he came to visit, and you can see it when you come to visit too!</p>
+                        <p class="location-text">Don't forget to take a selfie to share with the folks back home.</p>
+
+                    </section>
+
+                    <section class="location-section-image">
+
+                        <img src="images/Mumbai Attraction 1 (Gateway of India).jpg"
+                        alt="gateway of india" class="location-image">
+
+                    </section>
+
+                </section>
+
+                <section class="location-section bottom-space">
+
+                    <section class="location-section-image">
+
+                        <img src="images/Mumbai Attraction 2 (Mahalakshmi Temple).jpg"
+                        alt="mahalakshmi temple" class="location-image">
+
+                    </section>
+
+                    <section class="location-section-text">
+
+                        <p class="location-text">The Mahalakshmi Temple is just over the road too!</p>
+                        <p class="location-text">One of Mumbai's oldest and most famous temples, it adorns the city which so many people call home.</p>
+                        <p class="location-text">So come on down and call Mumbai home for a day, your adventurous spirit will be rewarded with kind hospitality!</p>
+
+                    </section>
+
+                </section>
+
+                <!-- This button links to the Book a Stay page. Location
+                    dropdown will be autofilled from what page you're browsing -->
+                <button class="book-now bottom-space"
+                onclick="book_with_location('Mumbai Hotel');">
+                <span>BOOK NOW</span></button>
+
+            </section>
+       
+        </main>
+
+        <!-- The footer is fixed to the bottom of the page and contains links
+            to the Privacy Policy, Terms and Conditions, and back to the homepage -->
+        <footer>
+
+            <a href="privacy policy.html">Privacy Policy</a>
+            <a href="index.html">© Tropical Paradise Ltd</a>
+            <a href="terms and conditions.html">Terms and Conditions</a>
+
+        </footer>
+
+    </body>
+
+    <!-- Implements page redirection when relevant button is pressed -->
+    <script src="js/script.js"></script>
+
+    <!-- For the side-nav link scrolling -->
+    <script src="js/script1.js"></script>
+
+    <!-- Store the current page in localStorage before redirecting to Book a
+        Stay when BOOK NOW button pressed -->
+    <script src="js/script2.js"></script>
+
+</html>

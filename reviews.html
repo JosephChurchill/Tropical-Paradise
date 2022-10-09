@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+
+<html>
+
+    <head>
+
+        <title>Tropical Paradise - About us</title>
+
+        <!-- Stylesheet for all pages -->
+        <link rel="stylesheet" href="css/style.css">
+
+    </head>
+
+    <body>
+
+        <!-- The header contains an icon and link to the homepage, and links to
+            different parts of the site on the right -->
+        <header>
+
+            <!-- Website icon embedded in <a> element to direct back to
+                homepage from anywhere in the site -->
+            <a href="index.html"><img class="website-icon"
+                src="images/icon.jpg"
+                alt="icon"></a>
+
+            <!-- Title redirects to homepage on click. Hidden when screen width
+                is narrower that 1200px -->
+            <a class="website-title" href="index.html">Tropical Paradise</a>
+
+            <!-- This is an empty element with auto right margin to make the
+                navigation links stick to right when the website title is
+                hidden due to narrower screen -->
+            <a class="website-title-alt"></a>
+
+            <!-- This navbar sticks to the right of the header and contains
+                navigation links -->
+            <nav>
+
+                <!-- The elements of this list are top-level navigation
+                    buttons -->
+                <ul class="header-links">
+
+                    <!-- A button to direct to the Book a Stay page -->
+                    <li><button class="header-link"
+                        onclick="button_click('book a stay.html');">
+                        BOOK A STAY</button></li>
+                    
+                    <!-- A locations dropdown menu appears when the user hovers
+                        over the LOCATIONS button -->
+                    <li class="dropdown">
+
+                        <!-- LOCATIONS button -->
+                        <button class="header-link">LOCATIONS</button>
+                        
+                        <!-- Dropdown menu links, not displayed initially -->
+                        <ul class=dropdown-content>
+
+                            <!-- These links redirect to the relevant Location
+                                page -->
+                            <li><a href="malibu mansion.html">
+                                Malibu Mansion</a></li>
+                            <li><a href="dubai apartment.html">
+                                Dubai Apartment</a></li>
+                            <li><a href="amazon treehouse.html">
+                                Amazon Treehouse</a></li>
+                            <li><a href="tibetan cave.html">
+                                Tibetan Cave</a></li>
+                            <li><a href="antarctic station.html">
+                                Antarctic Station</a></li>
+                            <li><a href="mumbai hotel.html">
+                                Mumbai Hotel</a></li>
+                            <li><a href="saharan bungalow.html">
+                                Saharan Bungalow</a></li>
+
+                        </ul>
+
+                    </li>
+
+                    <!-- More buttons -->
+                    <li><button class="header-link"
+                        onclick="button_click('about us.html');">
+                        ABOUT US</button></li>
+                    <li><button class="header-link"
+                        onclick="button_click('reviews.html');">
+                        REVIEWS</button></li>
+                    <li><button class="header-link"
+                        onclick="button_click('contact.html');">
+                        CONTACT</button></li>
+                    
+                </ul>
+
+            </nav>
+
+        </header>
+
+        <!-- This is the main section of the page, apart from the header and
+            footer -->
+        <main id="reviews-main">
+
+            <h1 id="reviews-header">Customer Reviews</h1>
+
+            <section class="customer-review">
+
+                <img src="images/Customer Profile 1.jpg"
+                alt="customer profile">
+
+                <p1>Daniel</p1>
+
+                <p2>So awful!!! The service was terrible and the food was
+                    disgusting! Would not recommend! 0 stars! Won’t be coming
+                    again!</p2>
+
+            </section>
+
+            <section class="customer-review">
+
+                <img src="images/Customer Profile 2.jpg"
+                alt="customer profile">
+
+                <p1>Babe</p1>
+
+                <p2>Ooooooooooooooooo gagagaga I loved the
+                    foooooooooooooooooood</p2>
+
+            </section>
+
+            <section class="customer-review">
+
+                <img src="images/Customer Profile 3.jpg"
+                alt="customer profile">
+
+                <p1>Brahms</p1>
+
+                <p2>You know that warning in the privacy policy about the
+                    hidden cameras? Yea I put those in. They’re talking about
+                    me</p2>
+
+            </section>
+
+            <section class="customer-review">
+
+                <img src="images/Customer Profile 4.jpg"
+                alt="customer profile">
+
+                <p1>Ed</p1>
+
+                <p2>While the food was nourishing and delicious, the
+                    presentation could have been more exquisite. The beds were
+                    soft tho.</p2>
+
+            </section>
+
+            <h2 id="submit-review-header">Submit a review</h2>
+
+            <section id="user-review">
+
+                <textarea id="review-entry"
+                placeholder="Start typing ..."></textarea>
+
+                <section id="review-name-and-button">
+
+                    <input id="review-name" placeholder="Your name">
+                    <button id="submit-review"
+                    onclick="document.location.href='page unavailable.html';">
+                    Submit</button>
+
+                </section>
+
+            </section>
+
+        </main>
+
+        <!-- The footer is fixed to the bottom of the page and contains links
+            to the Privacy Policy, Terms and Conditions, and back to the
+            homepage -->
+        <footer>
+
+            <a href="privacy policy.html">Privacy Policy</a>
+            <a href="index.html">© Tropical Paradise Ltd</a>
+            <a href="terms and conditions.html">Terms and Conditions</a>
+
+        </footer>
+
+    </body>
+
+    <!-- Implements page redirection when relevant button is pressed -->
+    <script src="js/script.js"></script>
+
+</html>
